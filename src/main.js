@@ -4,7 +4,11 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-new Vue({
+window.vue = new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  data:
+  {
+    today: new Date().toLocaleString()
+  }
 }).$mount('#app')
